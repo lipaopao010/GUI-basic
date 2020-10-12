@@ -10,9 +10,16 @@
     />
     <link rel="stylesheet" href="sweetalert2.min.css">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>User interface</title>
   </head>
   <body>
+
+   <!-- Navigation bar with logo -->
+
+    <div class="topnav">
+      <img src="assets/logo-big.png" alt="logo">
+    </div>
     <!-- welcome paragragh -->
     <h1>Welcome to our page !</h1>
     <h2>Please upload yor files</h2>
@@ -26,11 +33,15 @@
           <form id="modelcontainer">
            
             <div class ="wrapper">
+              
               <label class ="modellabel">
-                Choose <b>MODEL FILE</b> to upload
+                
+                <img src="assets/file1.svg" class="img-fluid"
+              alt="example image">
                 <div class="file-upload">
                   <input type="file" id="modelfile" accept=".csv" />
                 </div>
+                Choose <b>MODEL FILE</b> to upload
               </label>
             </div>
             
@@ -44,10 +55,13 @@
         <div class="col-md-6 col-sm-12">
           <form>
             <div class="wrapper">
-              <label>Choose <b>BLAST FILE</b> to upload
+              <label>
+                <img src="assets/file2.svg" class="img-fluid"
+              alt="example image">
                 <div class="file-upload">
                   <input type="file" id="blastfile" accept=".csv" />
                 </div>
+                Choose <b>BLAST FILE</b> to upload
               </label>
             </div>
             
@@ -60,12 +74,14 @@
 
       </div>
 
-    <div class="container">
+     
 
-      
-   
+    <div class=" runbutton">
+
       <!-- the button to run program -->
-      <button id="run">Run program</button>
+      <!-- <a href="/run"> -->
+      <button id="run" onclick="runProgram()">Run program</button>
+      </a>
     </div>
 
     <!--  Script -->
