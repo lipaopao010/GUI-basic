@@ -3,88 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- boostrap  -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <!-- sweet alert styles -->
+    <!-- <link rel="stylesheet" href="sweetalert2.min.css" /> -->
+    <!-- css styles -->
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
     <title>User interface</title>
   </head>
   <body>
+    <!-- Navigation bar with logo -->
 
-   <!-- Navigation bar with logo -->
+    <!-- Just an image -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <img src="assets/logo-big.png" height="60" alt="logo" />
+      </a>
+    </nav>
 
-    <div class="topnav">
-      <img src="assets/logo-big.png" alt="logo">
-    </div>
     <!-- welcome paragragh -->
-    <h1>Welcome to our page !</h1>
+    <h1>Welcome to our page </h1>
     <h2>Please upload yor files</h2>
 
-    
     <!-- first form to submit model file -->
     <div class="container">
       <div class="row">
-
         <div class="col-md-6 col-sm-12">
           <form id="modelcontainer">
-           
-            <div class ="wrapper">
-              
-              <label class ="modellabel">
-                
-                <img src="assets/file1.svg" class="img-fluid"
-              alt="example image">
+            <div class="wrapper">
+              <label class="modellabel">
+                <img
+                  src="assets/file1.svg"
+                  class="img-fluid"
+                  alt="image for uploading"
+                />
                 <div class="file-upload">
                   <input type="file" id="modelfile" accept=".csv" />
                 </div>
-                Choose <b>MODEL FILE</b> to upload
+                <div>Choose <b>MODEL FILE</b> to upload</div>
               </label>
             </div>
-            
-
+            <!-- this is the message showing file name -->
             <div id="modelmessage">
               <p>No files currently selected for upload</p>
             </div>
           </form>
         </div>
-
+        <!-- this is where to upload the second file -->
         <div class="col-md-6 col-sm-12">
           <form>
             <div class="wrapper">
               <label>
-                <img src="assets/file2.svg" class="img-fluid"
-              alt="example image">
+                <img
+                  src="assets/file2.svg"
+                  class="img-fluid"
+                  alt="image for uploading"
+                />
                 <div class="file-upload">
                   <input type="file" id="blastfile" accept=".csv" />
                 </div>
                 Choose <b>BLAST FILE</b> to upload
               </label>
             </div>
-            
-
+            <!-- this is the message showing file name -->
             <div id="blastmessage">
               <p>No files currently selected for upload</p>
             </div>
           </form>
         </div>
-
       </div>
 
-     
+      <div class="runbutton">
+        <!-- the button to run program -->
+        <!-- <a href="/run"> -->
+          <button id="run" onclick="runProgram()">Run program</button>
+        </a>
+      </div>
+    </div>
 
-    <div class=" runbutton">
-
-      <!-- the button to run program -->
-      <!-- <a href="/run"> -->
-      <button id="run" onclick="runProgram()">Run program</button>
-      </a>
+    <!-- footer section -->
+    <div class="footer">
+      <p>Made by AUGMENT EXPERT SYSTEMS</p>
     </div>
 
     <!--  Script -->
+    <!-- sweet alert -->
     <script src="script.js"></script>
     <script src="sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
